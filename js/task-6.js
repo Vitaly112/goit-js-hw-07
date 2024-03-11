@@ -4,6 +4,9 @@ function getRandomHexColor() {
 
 function createBoxes(amount) {
   const boxesContainer = document.getElementById('boxes');
+  
+  // Очистка попередньо виведених блоків
+  destroyBoxes();
 
   for (let i = 0; i < amount; i++) {
     const box = document.createElement('div');
@@ -36,3 +39,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
   destroyButton.addEventListener('click', destroyBoxes);
 });
+
