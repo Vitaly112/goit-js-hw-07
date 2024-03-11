@@ -1,7 +1,11 @@
-function getElementWidth (content, padding, border) {
-const sum = Number.parseFloat(content) + (Number.parseFloat(padding) *2) + (Number.parseFloat(border) *2);
-return sum;
-}
-console.log(getElementWidth("50px", "8px", "4px")); // 74
-console.log(getElementWidth("60px", "12px", "8.5px")); // 101
-console.log(getElementWidth("200px", "0px", "0px")); // 200
+const textInput = document.querySelector('#name-input');
+const textoutput = document.querySelector('#name-output');
+textInput.addEventListener("input", (event) => {
+    const inputValue = event.currentTarget.value.trim();
+
+    if (inputValue === "") {
+        textOutput.textContent = "Anonymous";
+    } else {
+        textOutput.textContent = inputValue;
+    }
+});
